@@ -1,0 +1,29 @@
+<h1>みんなのつぼ</h1>
+<h3>悩み・相談・お題・投稿フォーム</h3>
+<%= form_for @tweet do |f| %>
+<div class="field">
+    <%= f.label :potision_tweets %>
+    <%= f.select :potision_tweets, 
+    [["大学", "大学"], 
+    ["就活", "就活"], 
+    ["勉強", "勉強"],
+    ["日常生活", "日常生活"],
+    ["アルバイト", "アルバイト"],
+    ["恋愛","恋愛"],
+    ["友達","友達"],
+    ["たかつぼについて","たかつぼについて"],
+    ["その他", "その他"]], include_blank: "選択して下さい" %>
+</div>
+
+    <div class="field">
+       <%= f.label :about_tweets %>
+       <%= f.text_field :about_tweets, :size => 50 %>
+    </div>
+    <%= f.submit "投稿する" %>
+
+
+
+
+<%= link_to "投稿一覧に戻る", tweets_path %>
+<% end %>
+

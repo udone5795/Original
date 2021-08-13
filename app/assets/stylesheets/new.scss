@@ -1,0 +1,15 @@
+.login_container{
+  background-image:image-url("back.jpg");
+  background-size: cover;
+  width: 100% !important;
+}
+.row{
+  width: 800px;
+  margin: 0 auto;
+}
+.actions{
+    margin: 5px 0;
+   display: flex;
+   justify-content: space-between;
+}
+
