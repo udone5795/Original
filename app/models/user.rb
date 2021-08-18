@@ -11,6 +11,9 @@ class User < ApplicationRecord
  
  validates :name, presence: true
  validates :profile, length: { maximum: 200 }
+ validates :email, presence: true, length: { maximum: 255 },
+                    format: { with: /\A[\w+\-.]+@[tcue]+\.[ac]+\.[jp]/i },
+                    uniqueness: { case_sensitive: false }
 
 def already_liked?(tweet)
   self.likes.exists?(tweet_id: tweet.id)

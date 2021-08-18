@@ -1,0 +1,50 @@
+.econtainer{
+    background-image:image-url("back.jpg");
+    background-size:  cover;
+    padding:  0;
+    background-repeat: no-repeat;
+
+}
+.etitle{
+    padding: 10px;
+    width: auto;
+    
+}
+.emain{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.efirst{
+    margin: auto;
+}
+.esecond{
+    margin: auto;
+}
+.ethird{
+    margin: auto;
+}
+.efour{
+    margin: auto;
+}
+.efifth{
+    margin: auto;
+}
+.eaction{
+    margin: auto;
+}
+.edb{
+    display: flex;
+}
+.edelete{
+    margin: 10px;
+    width: auto;
+    padding: 5px;
+}
+.eback{
+    margin: 10px;
+    width: auto;
+    padding: 5px;
+}

@@ -1,0 +1,46 @@
+.mcontainer{
+    background-image:image-url("back.jpg");
+    background-size:  cover;
+    padding:  0;
+    background-repeat: no-repeat;
+
+}
+
+.mfirst{
+    flex-direction: column;
+    margin: 20px;
+    border: solid 2px;
+    width: auto;
+    padding: 10px;
+    
+}
+.msecond{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    border: solid 2px;
+    padding: 10px;   
+}
+
+.m22{
+    margin: auto;
+}
+.mthird{
+    margin: 20px;
+    flex-direction: column;
+    width: auto;
+    border: solid 2px;
+    padding: 10px;
+    display: flex;
+}
+.m31{
+    margin: auto;
+}
+.m32{
+    margin: auto;
+}
+.return{
+    margin: 20px;
+    width: auto;
+}
