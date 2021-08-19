@@ -1,19 +1,18 @@
-<%= stylesheet_link_tag 'newtw', :media => "all" %>
-<div class main>
- <div class = "first">
-  <div class = "back1">
-  <div class = "bg_text">
-  <div class = "bg_text1">
+<div class="main">
+ <div class="first">
+  <div class="back1">
+  <div class="bg_text">
+  <div class="bg_text1">
   <h1>みんなのつぼ</h1>
   <h3>悩み・相談・お題・投稿フォーム</h3>
   </div>
   </div>
   </div>
  </div> 
- <div class = "presecond">
- <div class = "second">
+ <div class="presecond">
+ <div class="second">
   <%= form_for @tweet do |f| %>
-   <div class="field　pt-5">
+   <div class="field pt-5">
     <%= f.label :お悩みジャンル %>
     <%= f.select :potision_tweets, 
     [["大学", "大学"], 
@@ -32,9 +31,9 @@
        <%= f.text_field :about_tweets, :size => 200 ,class: "col-md-12 form-control"%>
     </div>
    
-   <div class=" pt-3">
+   <div class="pt-3">
     <%= f.submit "投稿する",class: "btn btn-primary" %>
-   <div class = "pt-2"> 
+   <div class="pt-2"> 
     <%= link_to "投稿一覧に戻る", tweets_path%>
    </div> 
    </div> 
