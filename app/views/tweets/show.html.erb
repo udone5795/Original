@@ -1,5 +1,7 @@
-<h1>投稿詳細</h1>
+<div class="tsmain">
+<h3>投稿詳細</h3>
 <div class="tweet">
+<div class="tweet col-md-2">
   <p><%= @tweet.about_tweets %></p>
   <p><%= @tweet.created_at %></p>
   <p><%= @tweet.potision_tweets %></p>
@@ -7,19 +9,21 @@
   <% if user_signed_in? %>
   <% if current_user.already_liked?(@tweet) %>
       <%= link_to tweet_like_path(@tweet), method: :delete do %>
-        <i class="fas fa-heart"></i><%= @tweet.likes.count %>
+        <i class="fas fa-star"></i><%= @tweet.likes.count %>
       <% end %>
   <% else %>
       <%= link_to tweet_likes_path(@tweet), method: :post do %>
-        <i class="far fa-heart"></i><%= @tweet.likes.count %>
+        <i class="far fa-star"></i><%= @tweet.likes.count %>
       <% end %>
   <% end %>
 <% else %>
-  <i class="far fa-heart"></i><%= @tweet.likes.count %>
+  <i class="far fa-star"></i><%= @tweet.likes.count %>
 <% end %>
+</div>
 
-<div class="comment-wrapper">
-  <p>コメント一覧</p>
+<div class="comment">
+<div class="comment-wrapper col-md-8">
+  <p>コメント一覧(コメントは削除出来ないので慎重に！)</p>
   <% @comments.each do |c| %>
     <div>
       <%= c.user.email unless c.user.blank? %>
@@ -38,9 +42,10 @@
     <% end %>
   <% end %>
 </div>
-
-
-
 </div>
 
+<div class="tsall">
 <%= link_to "Tweet一覧に戻る", tweets_path %>
+</div>
+
+</div>

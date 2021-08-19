@@ -1,5 +1,15 @@
+<div class="edback">
+<div class="edtw">
 <%= form_for @tweet do |f| %>
-    <%= f.label :body %>
-    <%= f.text_field :about_tweets, :size => 60 %> 
-    <%= f.submit "編集する" %>
-  <% end %>
+  
+   <div class="edtw1">
+    <h3><%= f.label :投稿内容 %></h3>
+    <%= f.text_field :about_tweets, class: "col-md-7 form-control" %>
+   </div>
+   <div class="edbotton pt-3">
+    <%= f.submit "編集する",class: "btn btn-primary" %>
+   <% end %>
+   <%= link_to "投稿一覧に戻る", tweets_path%>
+   </div>
+</div>
+</div>

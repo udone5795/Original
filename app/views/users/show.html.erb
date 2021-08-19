@@ -1,22 +1,49 @@
-<h2>あなたのつぼ</h2>
-<p>名前 : <%= @user.name %></p>
-<p>メールアドレス : <%= @user.email %></p>
-<p>プロフィール : <%= @user.profile %></p>
-
-<% if current_user.id == @user.id %>
+<div class="mcontainer"> 
+ <div class="row">
+ <div class="main">
+ <div class="mfirst">
+ <h2>つぼに投稿した人</h2>
+  <div class="f1 pt-1">
+  <p>名前 : <%= @user.name%></p>
+  </div>
+  <div class="f2 pt-1">
+  <p>メールアドレス : <%= @user.email %></p>
+  </div>
+  <div class="f3 pt-1">
+  <p>プロフィール : <%= @user.profile %></p>
+  </div>
+  <div class="f4 pt-1">
+  <% if current_user.id == @user.id %>
   <%= link_to "編集する", edit_user_registration_path %>
-<% end %>
+  <% end %>
+  </div>
+ </div>
+ 
+ <div class="msecond">
+ <h4>これまでの投稿一覧</h4>
+ <% @user.tweets.each do |t| %>
+  <div class="m22">
+  <%= t.about_tweets %>
+  <%= link_to "詳細", tweet_path(t.id) %>
+  </div>
+  <% end %>
+ </div> 
 
-<h4>あなたの投稿一覧</h4>
-<% @user.tweets.each do |t| %>
+ <div class="mthird">
+ <h4>いいねした投稿一覧</h4>
+ <% @user.liked_tweets.each do |t| %>
+  <div class="m31">
   <%= t.user.name %>
   <%= t.about_tweets %>
-<% end %>
-
-<h4>あなたがいいねした投稿一覧</h4>
-<% @user.liked_tweets.each do |t| %>
-  <%= t.user.name %>
-  <%= t.about_tweets %>
-<% end %>
-
-<%= link_to "Tweet一覧に戻る", tweets_path %>
+  </div>
+  <div class="m32">
+  <%= link_to "詳細", tweet_path(t.id) %>
+  </div>
+  <% end %>
+  </div>
+ <div class="return">
+ <%= link_to "Tweet一覧に戻る", tweets_path %>
+ </div>
+ </div>
+</div> 
+</div>
