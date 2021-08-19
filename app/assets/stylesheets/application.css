@@ -224,7 +224,7 @@ h2{
   padding: 5px;
 }
 .mcontainer{
-  background-image:image-url("back.jpg");
+  background-image:url("back.jpg");
   background-size:  cover;
   padding:  0;
   background-repeat: no-repeat;
@@ -274,7 +274,7 @@ h2{
   width: auto;
 }
 .login_container{
-  background-image:image-url("back.jpg");
+  background-image:url("back.jpg");
   background-size: cover;
   width: 100% !important;
   height: 750px;
@@ -320,7 +320,7 @@ padding-left: 15px;
   background-color: rgba(255, 255, 255, 0.7);
 }
 .back1{
-  background-image:image-url("top_12.jpg");
+  background-image:url("top_12.jpg");
   background-size:  auto;
   padding:  15px;
   height: 400px;
@@ -333,7 +333,7 @@ padding-left: 15px;
 }
 
 .presecond{
-  background-image:image-url("back.jpg");
+  background-image:url("back.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-size:  1400px;
@@ -347,7 +347,7 @@ padding-left: 15px;
   padding: 10px;
 }
 .tsmain{
-  background-image:image-url("back.jpg");
+  background-image:url("back.jpg");
   background-size:  cover;
   padding:  0;
   background-repeat: no-repeat;
